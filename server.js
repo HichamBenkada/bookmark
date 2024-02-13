@@ -6,7 +6,8 @@ const express = require('express');
 const app = express();
 // Port in which the server will run on
 const PORT = process.env.PORT || 8000;
-
+const cors = require('cors');
+app.use(cors());
 const bookmarkRouter = require('./routes/bookmarks');
 
 // Configuring the server to accept and parse JSON data.
